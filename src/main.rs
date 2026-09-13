@@ -73,7 +73,7 @@ fn ensure_cargo_llvm_lines_installed() -> Result<()> {
     }
 
     eprintln!(
-        "[executor_llvm_lines] cargo-llvm-lines not found; installing v{CARGO_LLVM_LINES_VERSION}..."
+        "[wezel_llvm_lines] cargo-llvm-lines not found; installing v{CARGO_LLVM_LINES_VERSION}..."
     );
     let status = std::process::Command::new("cargo")
         .args([
