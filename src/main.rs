@@ -55,7 +55,12 @@ function (u64). Filter tags:\n\
     }
 }
 
-forager_sdk::forager_main!(LlvmLines);
+fn main() {
+    if let Err(error) = forager_sdk::run::<LlvmLines>() {
+        eprintln!("{}: {error:#}", env!("CARGO_BIN_NAME"));
+        std::process::exit(1);
+    }
+}
 
 fn ensure_cargo_llvm_lines_installed() -> Result<()> {
     let probe = std::process::Command::new("cargo")
@@ -68,7 +73,7 @@ fn ensure_cargo_llvm_lines_installed() -> Result<()> {
     }
 
     eprintln!(
-        "[forager-llvm-lines] cargo-llvm-lines not found; installing v{CARGO_LLVM_LINES_VERSION}..."
+        "[wezel_llvm_lines] cargo-llvm-lines not found; installing v{CARGO_LLVM_LINES_VERSION}..."
     );
     let status = std::process::Command::new("cargo")
         .args([

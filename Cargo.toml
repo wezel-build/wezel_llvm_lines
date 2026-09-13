@@ -1,13 +1,13 @@
 [package]
-name = "forager_llvm_lines"
+name = "wezel_llvm_lines"
 version = "0.1.0"
 edition = "2024"
-repository = "https://github.com/wezel-build/forager_llvm_lines"
+repository = "https://github.com/wezel-build/wezel_llvm_lines"
 publish = false
 license = "Apache-2.0"
 
 [[bin]]
-name = "forager-llvm-lines"
+name = "wezel_llvm_lines"
 path = "src/main.rs"
 
 [package.metadata.dist]
