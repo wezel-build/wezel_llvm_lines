@@ -2,7 +2,7 @@
 name = "executor_llvm_lines"
 version = "0.1.0"
 edition = "2024"
-repository = "https://github.com/wezel-build/forager_llvm_lines"
+repository = "https://github.com/wezel-build/executor_llvm_lines"
 publish = false
 license = "Apache-2.0"
 
